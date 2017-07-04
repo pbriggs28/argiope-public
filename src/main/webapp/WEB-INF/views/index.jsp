@@ -1,13 +1,19 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<%@page contentType="text/html" pageEncoding="UTF-8" import="com.preston.argiope.app.constant.legacy.ArgiopeConstantTestElement" %>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
-    </head>
-    <body>
-        <h1>${message}</h1>
-    </body>
-</html>
+
+<t:master>
+	<jsp:attribute name="title">Home</jsp:attribute>
+	<jsp:attribute name="styles"></jsp:attribute>
+	<jsp:body>
+		<div class="${argiopeConstantTestElement.CLASS_PAGE_INDEX}">
+       		<h1>This is the homepage!</h1>
+       		<c:if test="${not empty loginSuccessMsg}">
+				<div class="${argiopeConstantTestElement.CLASS_LOGIN_SUCCESS}">
+					<h2>Successfully Logged In</h2>
+				</div>
+       		</c:if>
+       </div>
+	</jsp:body>
+</t:master>

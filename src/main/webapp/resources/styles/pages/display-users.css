@@ -1,0 +1,117 @@
+#displayusers {
+/* 	margin: auto; */
+	width: 660px;
+	/* This is supposed to add scroll bar, not working */
+/* 	overflow: auto;  */
+	
+}
+
+#displayusers h1 {
+/* 	margin: auto; */
+	text-align: center;
+	color: #fff;
+	margin-top: 30px;
+	height: 40px;
+}
+
+#table-display-users-wrapper{
+	overflow: auto;
+	max-height: 670px;
+	width: 5000px;
+/* 	margin: auto; */
+}
+
+#table-display-users {
+	/*Visual*/
+/* 	background: #fff; */
+/* 	background-color: #fff; */
+	border: 2px groove aqua;
+/* 	border-right: ; */
+/* 	overflow: auto; */
+
+	
+	/*Dimensions and Spacing*/
+	margin: 30px;
+	margin-top: ;
+/* 	padding: ; */
+/* 	padding-bottom: 30px; */
+/* 	padding-top: ; */
+/* 	float: ; */
+/* 	overflow: ; */
+	height: 100px;
+	max-height: 420px;
+	width: 600px;
+/* 	z-index: ; */
+	
+	/*Positioning*/
+/* 	position: ; */
+	display: ;
+/* 	top: ; */
+/* 	left: ; */
+/* 	right: ; */
+/* 	bottom: ; */
+	
+	/*Text*/
+	color: 000;
+	line-height: ;
+	text-align: ;
+	font-size: ;	
+}
+
+#table-display-users th, #table-display-users td {
+	border: 2px groove #000;
+	padding-left: 3px;
+	vertical-align: middle;
+}
+
+#table-display-users tr:nth-child(even) {
+	background-color: #d9d9d9;
+}
+
+tr:nth-child(even) {
+	background-color: #d9d9d9;
+}
+
+tr:nth-child(odd) {
+	background-color: #8c8c8c;
+}
+
+#button-display-users-delete {
+	height: 40px;
+	background-color: #d9d9d9;
+	border: 1px solid #000;
+	border-radius: 5px;
+	margin: 5px auto;
+	display: block;
+	
+}
+
+#table-col-delete-user {
+	background-color: #8c8c8c;
+/* 	border: 5px groove #000; */
+
+}
+
+#error-delete-user {
+	width: 600px;
+	margin: 30px;
+/* 	background: rgba(0,0,0,0); */
+/* 	background: transparent; */
+	background: none;
+/* 	background-color: rgba(0,0,0,0); */
+/* 	background-color: transparent; */
+	color: red;
+	text-align: center;
+}
+
+#success-delete-user {
+	width: 600px;
+	margin: 30px;
+/* 	background: rgba(0,0,0,0); */
+/* 	background: transparent; */
+	background: none;
+/* 	background-color: rgba(0,0,0,0); */
+/* 	background-color: transparent; */
+	color: green;
+	text-align: center;
+}

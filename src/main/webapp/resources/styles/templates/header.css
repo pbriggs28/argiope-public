@@ -1,0 +1,232 @@
+#header-template {
+	/*Visual*/
+	background: url("/Static/images/backgrounds/MetalBlack.jpg");
+/*			background-size: 1500px;*/
+/*			background-color: blueviolet;*/
+	border-bottom: 2px groove #999;
+	
+	/*Dimensions and Spacing*/
+/*			margin: ;*/
+/*			padding: ;*/
+/*			float: ;*/
+/*			overflow: ;*/
+	height: 130px;
+/*			width: ;*/
+	min-width: 1000px;
+	z-index: 10;
+	
+	/*Positioning*/
+	position: absolute;
+	top: 0px;
+	left: 200px;
+	right: 0px;
+/*			bottom: ;*/
+
+	/*Text*/
+	color: #fff;
+/*			line-height: ;*/
+/*			text-align: ;*/
+}
+
+/* Logout/Menu Buttons */
+#top-right-nav{
+	/*Visual*/
+/*			background: ;*/
+/* 	background-image: url(/Static/images/backgrounds/MetalGrey.jpg); */
+/* 	background: linear-gradient(#737373, #a6a6a6); */
+	background: linear-gradient(#b3b3b3, #737373);
+	background-size: 250px;
+/*			background-color: blueviolet;*/
+	border-left: 2px groove #999;
+
+/* 	border: 1px solid #999; */
+/* 	border-left-width: 3px; */
+/* 	border-left-style: groove; */
+/*			border-radius: ;*/
+/*			display: block;*/
+	
+	/*Dimensions and Spacing*/
+/*			margin: 0px auto;*/
+/*			padding: ;*/
+/*			overflow: ;*/
+	height: 131px;
+	width: 250px;
+/* 			min-height: 200px; */
+/* 			min-width: 200px; */
+	z-index: 0;
+	
+	/*Positioning*/
+	position: absolute;
+	top: 0px;
+/*			left: ;*/
+	right: 0px;
+	bottom: 0px;
+/*			float: ;          */
+/*			clear: ;*/
+	
+	/*Text*/
+/*			font: ;*/
+/*			font-size: ;*/
+/*			color: ;*/
+/*			line-height: ;*/
+/*			text-align: ;*/
+}
+
+#top-right-nav #top-right-nav-username{
+	/*Visual*/
+/*			background: ;*/
+/* 	background-image: ; */
+/* 	background-size: ; */
+/* 			background-color: blueviolet; */
+/*			border: ;*/
+/*			border-radius: ;*/
+			display: table-cell;
+	
+	/*Dimensions and Spacing*/
+/*			margin: 0px auto;*/
+/*			padding: ;*/
+/*			overflow: ;*/
+	height: 45px;
+	width: 200px;
+			min-height: ;
+/* 			min-width: 150px; */
+/*			z-index: ;*/
+	
+	/*Positioning*/
+	position: absolute;
+/* 	top: 0px; */
+/*			left: ;*/
+/* 	right: 0px; */
+/* 	bottom: 0px; */
+/* 	float: left;          */
+/*			clear: ;*/
+	
+	/*Text*/
+/*			font: ;*/
+			font-size: ;
+			color: 000;
+/*			line-height: ;*/
+			text-align: ;
+			vertical-align: middle;
+	
+}
+
+#top-right-nav #top-right-nav-username p{
+	line-height: 45px;
+/* 	text-align: left; */
+	margin-left: 10px;
+}
+
+#top-right-nav #top-right-nav-username a:link, #top-right-nav #top-right-nav-username a:visited, #top-right-nav #top-right-nav-username a:hover, #top-right-nav #top-right-nav-username a:active {
+  text-decoration: none; 
+  color: #000;
+}
+
+/* a:link, a:visited, a:hover, a:active { */
+/*   text-decoration: none; color: #000; */
+/* } */
+
+#top-right-nav-logout{
+	/*Visual*/
+/*			background: ;*/
+	background-image: ;
+	background-size: ;
+/* 			background-color: 000; */
+/*			border: ;*/
+/*			border-radius: ;*/
+/*			display: block;*/
+	
+	/*Dimensions and Spacing*/
+/*			margin: 0px auto;*/
+/*			padding: ;*/
+/*			overflow: ;*/
+	height: 45px;
+	width: 50px;
+/*			min-height: ;*/
+/*			min-width: ;*/
+/*			z-index: ;*/
+	
+	/*Positioning*/
+	position: absolute;
+	top: 0px;
+/*			left: ;*/
+	right: 0px;
+	bottom: 0px;
+/* 	float: left;          */
+/*			clear: ;*/
+	
+	/*Text*/
+/*			font: ;*/
+/*			font-size: ;*/
+/*			color: ;*/
+/*			line-height: ;*/
+/*			text-align: ;*/
+}
+
+#top-right-nav-logout img{
+	margin: auto;
+	margin-top: 10px;
+	height:  25px;
+	display: block;
+}
+
+#top-right-nav-logout img:hover{
+	height: 26px;
+}
+
+#top-right-nav-logout img:active{
+	position: relative;
+	top: 1px;
+}
+
+#top-right-nav-settings{
+	/*Visual*/
+/*			background: ;*/
+/*			background-image: ;*/
+/* 			background-color: fff; */
+/*			border: ;*/
+/*			border-radius: ;*/
+/*			display: block;*/
+	
+	/*Dimensions and Spacing*/
+/*			margin: 0px auto;*/
+/*			padding: ;*/
+/*			overflow: ;*/
+	height: 45px;
+	width: 50px;
+/*			min-height: ;*/
+/*			min-width: ;*/
+/*			z-index: ;*/
+	
+	/*Positioning*/
+	position: absolute;
+	top: 45px;
+/*			left: ;*/
+	right: 0px;
+/* 	bottom: 0px; */
+/*			float: ;          */
+/*			clear: ;*/
+	
+	/*Text*/
+/*			font: ;*/
+/*			font-size: ;*/
+/*			color: ;*/
+/*			line-height: ;*/
+/*			text-align: ;*/
+}
+
+#top-right-nav-settings img{
+	margin: auto;
+	margin-top: 10px;
+	height: 25px;
+	display: block;
+}
+
+#top-right-nav-settings img:hover{
+	height: 27px;
+}
+
+#top-right-nav-settings img:active{
+	position: relative;
+	top: 1px;
+}

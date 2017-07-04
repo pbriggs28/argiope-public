@@ -1,0 +1,101 @@
+/* @CHARSET "ISO-8859-1"; What does this do? Is it required?*/
+
+* {
+	/*Visual*/
+/*			background-color: ;*/
+/*			border: ;*/
+	
+	/*Dimensions and Spacing*/
+	margin: 0px;
+	padding: 0px;
+/*			float: ;*/
+/*			overflow: ;*/
+/*			height: ;*/
+/*			width: ;*/
+/*			z-index: ;*/
+	
+	/*Positioning*/
+/*			position: ;*/
+/*			top: ;*/
+/*			left: ;*/
+/*			right: ;*/
+/*			bottom: ;*/
+	
+	/*Text*/
+/*			font-family: arial;*/
+/*			font-family: arial black;*/
+/*			font-family: tahoma;*/
+	font-family: "trebuchet MS";
+/*			color: ;*/
+/*			line-height: ;*/
+/*			text-align: ;*/
+	
+	
+}
+
+body{
+/* 	background: ; */
+	background-size: 2200px;
+/* 	width: 1000px; */
+	margin: auto;
+}
+
+/* .page-login{ */
+/* 	margin: auto; */
+/* } */
+
+#body{
+	/*Visual */
+	background: url("/Static/images/backgrounds/MetalBlack.jpg");
+
+/*			background-color: ; */
+/* 	border-left: 2px groove #999; */
+/* 	border-top: 2px groove #999; */
+	
+	/*Dimensions and Spacing */
+/*			margin: ; */
+/*			padding: ; */
+/*			float: ; */
+/*			overflow: ; */
+/*			height: ; */
+/*			width: ; */
+	min-height: 800px;
+	min-width: 1000px;
+/*			z-index: ; */
+	
+	/*Positioning */
+	position: absolute;
+	top: 130px;
+	left: 200px;
+	right: 0px;
+	bottom: 0px;
+	clear: both;
+	
+	/*Text */
+/*			color: ; */
+/*			line-height: ; */
+/*			text-align: ; */
+}
+
+.button-style-1{
+	background: linear-gradient(#d9d9d9, #8c8c8c);
+	border: 1px solid #999;
+	border-radius: 2px;
+}
+
+
+
+.button-style-1:hover{
+/* 	background: linear-gradient(#333, #4d4d4d); */
+	background: linear-gradient(#b3b3b3, #737373);
+}
+
+.button-style-1:link, .left-nav-button:visited {
+  text-decoration: none; 
+  color: #000;
+}
+
+.hide{
+/* 	display:none; */
+	color: #fff;
+}

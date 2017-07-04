@@ -1,0 +1,59 @@
+/* @CHARSET "ISO-8859-1"; What does this do? Is it required?*/
+
+@IMPORT url("/Static/styles/general/form-user.css");
+
+#form-user{
+	margin: auto;
+	margin-top: 150px;
+}
+
+* {
+	/*Visual*/
+/*			background-color: ;*/
+/*			border: ;*/
+	
+	/*Dimensions and Spacing*/
+	margin: 0px;
+	padding: 0px;
+/*			float: ;*/
+/*			overflow: ;*/
+/*			height: ;*/
+/*			width: ;*/
+/*			z-index: ;*/
+	
+	/*Positioning*/
+/*			position: ;*/
+/*			top: ;*/
+/*			left: ;*/
+/*			right: ;*/
+/*			bottom: ;*/
+	
+	/*Text*/
+/*			font-family: arial;*/
+/*			font-family: arial black;*/
+/*			font-family: tahoma;*/
+/* 	font-family: "trebuchet MS"; */
+/*			color: ;*/
+/*			line-height: ;*/
+/*			text-align: ;*/
+	
+	
+}
+
+body{
+	background: url("/Static/images/backgrounds/MetalBlack.jpg");
+	background-size: 2200px;
+/* 	width: 1000px; */
+	margin: auto;
+}
+
+#body{
+	min-height: ;
+	min-width: ;
+	
+	top: 100%;
+	left: 100%;
+	right: 100%;
+	bottom: 100%;
+	clear: ;
+}

@@ -1,0 +1,1 @@
+IF EXISTS (SELECT name FROM sys.schemas WHERE name = N'static') BEGIN DROP SCHEMA [static] END; EXEC ('CREATE SCHEMA [static];');

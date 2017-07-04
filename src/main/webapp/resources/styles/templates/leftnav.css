@@ -1,0 +1,172 @@
+
+
+
+#leftnav-template {
+	/*Visual*/
+	background: url("/Static/images/backgrounds/MetalBlack.jpg");
+/* 			background-color: fff; */
+/*			border: ;*/
+	border-right: 2px groove #999;
+
+	
+	/*Dimensions and Spacing*/
+/*			margin: ;*/
+/*			padding: ;*/
+/* 	padding-top: 50px; */
+/*			float: ;*/
+/*			overflow: ;*/
+/*			height: ;*/
+	min-height: 700px;
+	width: 200px;
+	z-index: 10;
+	
+	/*Positioning*/
+	position: absolute;
+	top: 0px;
+	left: 0px;
+/*			right: ;*/
+	bottom: 0px;
+	
+	/*Text*/
+	color: fff;
+/*			line-height: ;*/
+/*			text-align: ;*/
+}
+
+#link-home {
+	/*Visual*/
+/* 	background: ; */
+/* 	background-color: ; */
+/* 	border: ; */
+/* 	border-right: ; */
+
+	
+	/*Dimensions and Spacing*/
+/* 	margin: ; */
+	margin-top: 10px;
+/* 	padding: ; */
+/* 	padding-bottom: 30px; */
+/* 	padding-top: ; */
+/* 	float: ; */
+/* 	overflow: ; */
+	height: 50px;
+	width: 100%;
+/* 	z-index: ; */
+	
+	/*Positioning*/
+/* 	position: ; */
+	display: block;
+/* 	top: ; */
+/* 	left: ; */
+/* 	right: ; */
+/* 	bottom: ; */
+	
+	/*Text*/
+	color: fff;
+	line-height: 50px;
+	text-align: center;
+	font-size: 30px;	
+}
+
+#link-home:link {
+	text-decoration: none;
+	
+}
+
+/*Nav Buttons*/
+#left-nav-button-container{
+	margin-top: 90px;
+}
+
+.left-nav-button {
+	/*Visual*/
+/* 	background-color: ; */
+	
+	/*Dimensions and Spacing*/
+	margin: 10px auto;
+/*			padding: ;*/
+/*			float: ;*/
+/*			overflow: ;*/
+	height: 40px;
+	width: 160px;
+/*			z-index: ;*/
+	
+	/*Positioning*/
+			position: relative;
+	display: inline-block;
+/* 			top: 20; */
+			left: 20;
+/*			right: ;*/
+/*			bottom: ;*/
+	
+	/*Text*/
+/* 	color: ; */
+	line-height: 40px;
+	text-align: center;
+	
+}
+
+
+.left-nav-button:active{
+	position: relative;
+	top: 1px;
+}
+
+.left-nav-button-icon {
+	/*Visual*/
+/*			background-color: ;*/
+/*			border: ;*/
+	
+	/*Dimensions and Spacing*/
+			margin-top: 0%;
+/*			padding: ;*/
+	float: left;
+/*			overflow: ;*/
+	height: 100%;
+	width: 20%;
+/*			z-index: ;*/
+	
+	/*Positioning*/
+/*			position: ;*/
+/*			top: ;*/
+/*			left: ;*/
+/*			right: ;*/
+/*			bottom: ;*/
+	
+	/*Text*/
+/*			color: ;*/
+/*			line-height: ;*/
+/*			text-align: ;*/
+}
+
+.left-nav-button img {
+	height: 100%;
+}
+
+.left-nav-button-text {
+	/*Visual*/
+/*			background-color: ;*/
+/*			border: ;*/
+	
+	/*Dimensions and Spacing*/
+/*			margin: ;*/
+	margin-left: 15px;
+/*			padding: ;*/
+	float: left;
+/*			overflow: ;*/
+	height: 100%;
+	width: 70%;
+/*			z-index: ;*/
+	
+	/*Positioning*/
+/*			position: ;*/
+/*			top: ;*/
+/*			left: ;*/
+/*			right: ;*/
+/*			bottom: ;*/
+	
+	/*Text*/
+/*			color: ;*/
+/*			line-height: ;*/
+	text-align: left;
+}

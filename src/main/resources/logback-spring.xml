@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- Set the LOG_FILE environment variable so it overrides the value in the default Spring Boot logging config -->
+	<!-- TODO: log path environment variable will be set in ApplicationEnvironmentConfigurator.preconfigureApplicationEnvironment() -->
+<!-- 	<property name="LOG_FILE" value="${com.preston.argiope.log.path:-}"/> -->
+	
+	<!-- Call the default Spring Boot logging config -->
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+	
+	<!-- Create a logger for our app -->
+	<logger name="com.preston.argiope" additivity="false">
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+</configuration>

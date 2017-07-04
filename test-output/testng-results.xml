@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="27" passed="27">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ArgiopeMasterSuite" duration-ms="37966" started-at="2017-07-04T22:48:12Z" finished-at="2017-07-04T22:48:50Z">
+    <groups>
+    </groups>
+    <test name="Init-Configuration-Data" duration-ms="6" started-at="2017-07-04T22:48:12Z" finished-at="2017-07-04T22:48:12Z">
+    </test> <!-- Init-Configuration-Data -->
+    <test name="MasterTest" duration-ms="37893" started-at="2017-07-04T22:48:12Z" finished-at="2017-07-04T22:48:50Z">
+      <class name="com.preston.argiope.selenium.tests.user.UserCreate">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="beforeMethod" is-config="true" duration-ms="802" started-at="2017-07-04T15:48:34Z" finished-at="2017-07-04T15:48:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecCreateUserAlreadyExists()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="testExecCreateUserAlreadyExists" duration-ms="12084" started-at="2017-07-04T15:48:35Z" finished-at="2017-07-04T15:48:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecCreateUserAlreadyExists -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="beforeMethod" is-config="true" duration-ms="121" started-at="2017-07-04T15:48:47Z" finished-at="2017-07-04T15:48:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecCreateUserEmptyFirstName()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="testExecCreateUserEmptyFirstName" duration-ms="404" started-at="2017-07-04T15:48:47Z" finished-at="2017-07-04T15:48:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecCreateUserEmptyFirstName -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="beforeMethod" is-config="true" duration-ms="118" started-at="2017-07-04T15:48:47Z" finished-at="2017-07-04T15:48:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecCreateUserEmptyLastName()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="testExecCreateUserEmptyLastName" duration-ms="343" started-at="2017-07-04T15:48:47Z" finished-at="2017-07-04T15:48:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecCreateUserEmptyLastName -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="beforeMethod" is-config="true" duration-ms="62" started-at="2017-07-04T15:48:48Z" finished-at="2017-07-04T15:48:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecCreateUserEmptyPassword()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="testExecCreateUserEmptyPassword" duration-ms="315" started-at="2017-07-04T15:48:48Z" finished-at="2017-07-04T15:48:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecCreateUserEmptyPassword -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="beforeMethod" is-config="true" duration-ms="49" started-at="2017-07-04T15:48:48Z" finished-at="2017-07-04T15:48:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecCreateUserEmptyUsername()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="testExecCreateUserEmptyUsername" duration-ms="383" started-at="2017-07-04T15:48:48Z" finished-at="2017-07-04T15:48:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecCreateUserEmptyUsername -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="beforeMethod" is-config="true" duration-ms="131" started-at="2017-07-04T15:48:48Z" finished-at="2017-07-04T15:48:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecCreateUserSuccessfully()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserCreate@2f01783a]" name="testExecCreateUserSuccessfully" duration-ms="958" started-at="2017-07-04T15:48:49Z" finished-at="2017-07-04T15:48:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecCreateUserSuccessfully -->
+      </class> <!-- com.preston.argiope.selenium.tests.user.UserCreate -->
+      <class name="com.preston.argiope.selenium.tests.security.IpBlocking">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.preston.argiope.selenium.tests.security.IpBlocking@5f9edf14]" name="beforeClass" is-config="true" duration-ms="3" started-at="2017-07-04T15:48:12Z" finished-at="2017-07-04T15:48:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.IpBlocking@5f9edf14]" name="beforeMethod" is-config="true" duration-ms="1824" started-at="2017-07-04T15:48:12Z" finished-at="2017-07-04T15:48:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testFailedLoginAttemptsCounter()[pri:0, instance:com.preston.argiope.selenium.tests.security.IpBlocking@5f9edf14]" name="testFailedLoginAttemptsCounter" duration-ms="4444" started-at="2017-07-04T15:48:14Z" finished-at="2017-07-04T15:48:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFailedLoginAttemptsCounter -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.IpBlocking@5f9edf14]" name="beforeMethod" is-config="true" duration-ms="770" started-at="2017-07-04T15:48:19Z" finished-at="2017-07-04T15:48:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testFailedLoginAttemptsCounterReset()[pri:0, instance:com.preston.argiope.selenium.tests.security.IpBlocking@5f9edf14]" name="testFailedLoginAttemptsCounterReset" duration-ms="4474" started-at="2017-07-04T15:48:19Z" finished-at="2017-07-04T15:48:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFailedLoginAttemptsCounterReset -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.IpBlocking@5f9edf14]" name="beforeMethod" is-config="true" duration-ms="427" started-at="2017-07-04T15:48:24Z" finished-at="2017-07-04T15:48:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testIpBlockResetAfterCacheExpiration()[pri:0, instance:com.preston.argiope.selenium.tests.security.IpBlocking@5f9edf14]" name="testIpBlockResetAfterCacheExpiration" duration-ms="1" started-at="2017-07-04T15:48:24Z" finished-at="2017-07-04T15:48:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIpBlockResetAfterCacheExpiration -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.IpBlocking@5f9edf14]" name="beforeMethod" is-config="true" duration-ms="987" started-at="2017-07-04T15:48:24Z" finished-at="2017-07-04T15:48:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testIpBlockedErrorMsg()[pri:0, instance:com.preston.argiope.selenium.tests.security.IpBlocking@5f9edf14]" name="testIpBlockedErrorMsg" duration-ms="3482" started-at="2017-07-04T15:48:25Z" finished-at="2017-07-04T15:48:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIpBlockedErrorMsg -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.preston.argiope.selenium.tests.security.IpBlocking@5f9edf14]" name="afterClass" is-config="true" duration-ms="98" started-at="2017-07-04T15:48:29Z" finished-at="2017-07-04T15:48:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.preston.argiope.selenium.tests.security.IpBlocking -->
+      <class name="com.preston.argiope.selenium.tests.user.UserDelete">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserDelete@68878f6d]" name="beforeMethod" is-config="true" duration-ms="277" started-at="2017-07-04T15:48:50Z" finished-at="2017-07-04T15:48:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecDeleteUserSuccessfully()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserDelete@68878f6d]" name="testExecDeleteUserSuccessfully" duration-ms="302" started-at="2017-07-04T15:48:50Z" finished-at="2017-07-04T15:48:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecDeleteUserSuccessfully -->
+      </class> <!-- com.preston.argiope.selenium.tests.user.UserDelete -->
+      <class name="com.preston.argiope.selenium.tests.security.UnauthorizedNavigation">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="beforeMethod" is-config="true" duration-ms="40" started-at="2017-07-04T15:48:32Z" finished-at="2017-07-04T15:48:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testNavTo403()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="testNavTo403" duration-ms="1" started-at="2017-07-04T15:48:32Z" finished-at="2017-07-04T15:48:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavTo403 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="afterMethod" is-config="true" duration-ms="140" started-at="2017-07-04T15:48:32Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="beforeMethod" is-config="true" duration-ms="38" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testNavToAdmin()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="testNavToAdmin" duration-ms="1" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavToAdmin -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="afterMethod" is-config="true" duration-ms="71" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="beforeMethod" is-config="true" duration-ms="60" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testNavToCreateUser()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="testNavToCreateUser" duration-ms="1" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavToCreateUser -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="afterMethod" is-config="true" duration-ms="160" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="beforeMethod" is-config="true" duration-ms="41" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testNavToDeleteUser()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="testNavToDeleteUser" duration-ms="1" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavToDeleteUser -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="afterMethod" is-config="true" duration-ms="89" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="beforeMethod" is-config="true" duration-ms="86" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testNavToDisplayUsers()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="testNavToDisplayUsers" duration-ms="0" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavToDisplayUsers -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="afterMethod" is-config="true" duration-ms="163" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="beforeMethod" is-config="true" duration-ms="38" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testNavToIndex()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="testNavToIndex" duration-ms="1" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavToIndex -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="afterMethod" is-config="true" duration-ms="154" started-at="2017-07-04T15:48:33Z" finished-at="2017-07-04T15:48:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="beforeMethod" is-config="true" duration-ms="41" started-at="2017-07-04T15:48:34Z" finished-at="2017-07-04T15:48:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testNavToLogin()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="testNavToLogin" duration-ms="1" started-at="2017-07-04T15:48:34Z" finished-at="2017-07-04T15:48:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavToLogin -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="afterMethod" is-config="true" duration-ms="98" started-at="2017-07-04T15:48:34Z" finished-at="2017-07-04T15:48:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="beforeMethod" is-config="true" duration-ms="56" started-at="2017-07-04T15:48:34Z" finished-at="2017-07-04T15:48:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testNavToLogout()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="testNavToLogout" duration-ms="1" started-at="2017-07-04T15:48:34Z" finished-at="2017-07-04T15:48:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavToLogout -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.preston.argiope.selenium.tests.security.UnauthorizedNavigation@68746f22]" name="afterMethod" is-config="true" duration-ms="95" started-at="2017-07-04T15:48:34Z" finished-at="2017-07-04T15:48:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.preston.argiope.selenium.tests.security.UnauthorizedNavigation -->
+      <class name="com.preston.argiope.selenium.tests.user.UserLogin">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="beforeClass" is-config="true" duration-ms="51" started-at="2017-07-04T15:48:29Z" finished-at="2017-07-04T15:48:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="beforeMethod" is-config="true" duration-ms="100" started-at="2017-07-04T15:48:29Z" finished-at="2017-07-04T15:48:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecLoginEmptyPassword()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="testExecLoginEmptyPassword" duration-ms="382" started-at="2017-07-04T15:48:29Z" finished-at="2017-07-04T15:48:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecLoginEmptyPassword -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="beforeMethod" is-config="true" duration-ms="42" started-at="2017-07-04T15:48:29Z" finished-at="2017-07-04T15:48:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecLoginEmptyUsername()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="testExecLoginEmptyUsername" duration-ms="300" started-at="2017-07-04T15:48:29Z" finished-at="2017-07-04T15:48:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecLoginEmptyUsername -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="beforeMethod" is-config="true" duration-ms="94" started-at="2017-07-04T15:48:30Z" finished-at="2017-07-04T15:48:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecLoginEmptyUsernameEmptyPassword()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="testExecLoginEmptyUsernameEmptyPassword" duration-ms="340" started-at="2017-07-04T15:48:30Z" finished-at="2017-07-04T15:48:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecLoginEmptyUsernameEmptyPassword -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="beforeMethod" is-config="true" duration-ms="39" started-at="2017-07-04T15:48:30Z" finished-at="2017-07-04T15:48:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecLoginInvalidCredentials()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="testExecLoginInvalidCredentials" duration-ms="395" started-at="2017-07-04T15:48:30Z" finished-at="2017-07-04T15:48:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecLoginInvalidCredentials -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="beforeMethod" is-config="true" duration-ms="40" started-at="2017-07-04T15:48:31Z" finished-at="2017-07-04T15:48:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testExecLoginValidCredentials()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="testExecLoginValidCredentials" duration-ms="382" started-at="2017-07-04T15:48:31Z" finished-at="2017-07-04T15:48:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecLoginValidCredentials -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="beforeMethod" is-config="true" duration-ms="187" started-at="2017-07-04T15:48:31Z" finished-at="2017-07-04T15:48:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testLogout()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="testLogout" duration-ms="568" started-at="2017-07-04T15:48:31Z" finished-at="2017-07-04T15:48:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogout -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="beforeMethod" is-config="true" duration-ms="45" started-at="2017-07-04T15:48:32Z" finished-at="2017-07-04T15:48:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testNavToLoginPageAuth()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="testNavToLoginPageAuth" duration-ms="416" started-at="2017-07-04T15:48:32Z" finished-at="2017-07-04T15:48:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavToLoginPageAuth -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="beforeMethod" is-config="true" duration-ms="167" started-at="2017-07-04T15:48:32Z" finished-at="2017-07-04T15:48:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testNavToLoginPageUnauth()[pri:0, instance:com.preston.argiope.selenium.tests.user.UserLogin@41488b16]" name="testNavToLoginPageUnauth" duration-ms="71" started-at="2017-07-04T15:48:32Z" finished-at="2017-07-04T15:48:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavToLoginPageUnauth -->
+      </class> <!-- com.preston.argiope.selenium.tests.user.UserLogin -->
+      <class name="com.preston.argiope.selenium.app.TestConfig">
+        <test-method status="PASS" signature="init(org.testng.ITestContext)[pri:0, instance:com.preston.argiope.selenium.app.TestConfig@7d322cad]" name="init" is-config="true" duration-ms="1651" started-at="2017-07-04T15:48:11Z" finished-at="2017-07-04T15:48:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3a3e78f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.preston.argiope.selenium.app.TestConfig@7d322cad]" name="close" is-config="true" duration-ms="905" started-at="2017-07-04T15:48:50Z" finished-at="2017-07-04T15:48:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.preston.argiope.selenium.app.TestConfig -->
+    </test> <!-- MasterTest -->
+  </suite> <!-- ArgiopeMasterSuite -->
+</testng-results>

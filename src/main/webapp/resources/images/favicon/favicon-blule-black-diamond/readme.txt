@@ -1,0 +1,2 @@
+favicon-blule-black-diamond source: http://previews.123rf.com/images/cidepix/cidepix1311/cidepix131100307/23910760-Colorful-Spider-Web-Abstract-Icon-Stock-Vector.jpg
+favicon generator used: http://www.favicon-generator.org/

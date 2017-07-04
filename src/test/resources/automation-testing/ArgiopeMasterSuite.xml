@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ArgiopeMasterSuite" verbose="10">
+    <parameter name="selenium.host" value="localhost" />
+    <parameter name="selenium.port" value="3737" />
+    <parameter name="selenium.browser" value="*firefox" />
+    <parameter name="selenium.url" value="http://demo.opensourcecms.com/wordpress/" />
+
+
+    <test name="Init-Configuration-Data">
+        <classes>
+            <class name="com.preston.argiope.selenium.app.TestConfig"></class>
+        </classes>
+    </test>
+    <test name="MasterTest" preserve-order="true">
+        <packages>
+            <package name="com.preston.argiope.selenium.tests.*"></package>
+        </packages>
+    </test>
+</suite>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 
+		DEV-96: Fix for massive selenium logging during integration testing after adding Spring Boot.
+		Logback uses ch.qos.logback.classic.BasicConfigurator when no config file is found. Simply adding 
+		an empty config file will override this. 
+	-->
+</configuration>
