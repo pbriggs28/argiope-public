@@ -43,14 +43,10 @@ public class ArgiopeConstantSecurity {
 	
 	/* ~~~~~~~~~~~~~~~~~ Response Attributes ~~~~~~~~~~~~~~~~~ */
 	
-	public static final String RESP_ATTR_IP_BLOCKED = DevWebConstants.ResponseAttributes.IpBlocked.ATTRIBUTE; // "wOsiHdYvSPMRDFPOk6ZV";
-	public static final String RESP_VALUE_IP_BLOCKED_TRUE = DevWebConstants.ResponseAttributes.IpBlocked.TRUE; // "HKnCNgNuM1yPdJnvC7tF";
-	public static final String RESP_VALUE_IP_BLOCKED_FALSE = DevWebConstants.ResponseAttributes.IpBlocked.FALSE; // "Hc2HJrzixMBcqv3WV8b0";
-	public static final String RESP_ATTR_NUM_FAILED_LOGIN_ATTEMPTS = DevWebConstants.ResponseAttributes.FailedLoginCount.ATTRIBUTE; // "UQhuO4qPnW08PKRSfR1L";
-	public static final String RESP_ATTR_IP_BLOCK_RESET = DevWebConstants.ResponseAttributes.IpBlockReset.ATTRIBUTE; // "YcArkxP7jC5RdoU7pVmE";
-	public static final String RESP_VALUE_IP_BLOCK_RESET_TRUE = DevWebConstants.ResponseAttributes.IpBlockReset.TRUE; // "sCfu6iFsH8d4BU09lWcw";
-	public static final String RESP_VALUE_IP_BLOCK_RESET_FALSE = DevWebConstants.ResponseAttributes.IpBlockReset.FALSE; // "YuMutrjQt2FCh5P33Xby";
-	// TODO: How should we disguise the number of login attempts? Or should we not worry about it?
+	public static final String RESP_ATTR_IP_BLOCKED = DevWebConstants.ResponseAttributes.IpBlocked.ATTRIBUTE;
+	public static final String RESP_VALUE_IP_BLOCKED_TRUE = DevWebConstants.ResponseAttributes.IpBlocked.TRUE;
+	public static final String RESP_VALUE_IP_BLOCKED_FALSE = DevWebConstants.ResponseAttributes.IpBlocked.FALSE;
+	public static final String RESP_ATTR_NUM_FAILED_LOGIN_ATTEMPTS = DevWebConstants.ResponseAttributes.FailedLoginCount.ATTRIBUTE;
 	
 	public String getRESP_ATTR_IP_BLOCKED() {
 		return RESP_ATTR_IP_BLOCKED;
@@ -63,14 +59,5 @@ public class ArgiopeConstantSecurity {
 	}
 	public String getRESP_ATTR_NUM_FAILED_LOGIN_ATTEMPTS() {
 		return RESP_ATTR_NUM_FAILED_LOGIN_ATTEMPTS;
-	}
-	public String getRESP_ATTR_IP_BLOCK_RESET() {
-		return RESP_ATTR_IP_BLOCK_RESET;
-	}
-	public String getRESP_VALUE_IP_BLOCK_RESET_TRUE() {
-		return RESP_VALUE_IP_BLOCK_RESET_TRUE;
-	}
-	public String getRESP_VALUE_IP_BLOCK_RESET_FALSE() {
-		return RESP_VALUE_IP_BLOCK_RESET_FALSE;
 	}
 }

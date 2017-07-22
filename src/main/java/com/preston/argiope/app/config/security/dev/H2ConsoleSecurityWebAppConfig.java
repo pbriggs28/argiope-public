@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import com.preston.argiope.app.config.security.SecurityWebAppConfigExtender;
 import com.preston.argiope.app.constant.AppConstants;
+import com.preston.argiope.app.constant.dev.DevWebConstants;
 
 /**
  * Allows access to /h2-console to query the embedded database. Use a blank
@@ -19,6 +20,7 @@ import com.preston.argiope.app.constant.AppConstants;
 @Component
 @Profile(AppConstants.Profiles.DEV_EMBEDDED_DB_CONSOLE)
 public class H2ConsoleSecurityWebAppConfig extends SecurityWebAppConfigExtender {
+	private static final String H2_CONSOLE_PATH = DevWebConstants.RequestMappings.H2Console.DOMAIN_PATH + "**";
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -29,7 +31,7 @@ public class H2ConsoleSecurityWebAppConfig extends SecurityWebAppConfigExtender 
 		 */
 		http.headers().frameOptions().disable();
 		http.csrf().disable();
-		http.authorizeRequests().antMatchers("/h2-console/**").permitAll();
+		http.authorizeRequests().antMatchers(H2_CONSOLE_PATH).permitAll();
 		super.configure(http);
 	}
 

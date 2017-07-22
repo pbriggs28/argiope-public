@@ -30,6 +30,14 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	public User getUser(String username, boolean ignoreCase) {
+		if(ignoreCase)
+			return userDao.findByUsernameIgnoreCase(username);
+		User returnedUser = getUser(username);
+		return returnedUser;
+	}
+
+	@Override
 	public Iterable<User> getAllUsers() {
 		Iterable<User> returnedUserList = userDao.findAll();
 		return returnedUserList;

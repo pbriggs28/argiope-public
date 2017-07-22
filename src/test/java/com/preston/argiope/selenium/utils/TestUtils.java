@@ -1,14 +1,17 @@
 package com.preston.argiope.selenium.utils;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.web.client.RestTemplate;
 import org.testng.Assert;
 
+import com.preston.argiope.app.constant.AppConstants;
 import com.preston.argiope.app.constant.legacy.ArgiopeConstantTestElement;
-import com.preston.argiope.model.dev.ResetIpBlockingForm;
+import com.preston.argiope.model.dev.IpBlockingResetRequest;
+import com.preston.argiope.model.dev.IpBlockingResetResponse;
+import com.preston.argiope.model.dev.IpBlockingResetResponse.IpBlockingResetResult;
 import com.preston.argiope.selenium.app.DocumentReadyPredicate;
 import com.preston.argiope.selenium.app.TestConfig;
 import com.preston.argiope.selenium.constant.ArgiopeConstantTesting;
@@ -28,19 +31,6 @@ public class TestUtils {
 	private static WebDriver driver = TestConfig.getDriver();
 	private static WebDriverWait driverWait = TestConfig.getDriverWait();
 	public static final DocumentReadyPredicate docReadyPred = new DocumentReadyPredicate();
-	
-	/* Ex: "document.getElementsByClassName('HsvywMoxs1xvFKg3h4u4')[0].value = '6r7kVEVD3hg2XsyI26FE';" */
-	private static final String JAVASCRIPT_INSERT_IP_BLOCK_RESET_FORM_TEXT = "document.getElementsByClassName('" 
-			+ ArgiopeConstantTestElement.CLASS_INPUT_RESET_IP_BLOCKING + "')[0].value = '" 
-			+ ResetIpBlockingForm.VALID_FORM_VALUE + "';";
-	
-	/* Ex: "document.getElementsByClassName('P5esbtvNjfBxwgRDp0Dx')[0].submit();" */
-	private static final String JAVASCRIPT_SUBMIT_IP_BLOCK_RESET_FORM = "document.getElementsByClassName('" 
-			+ ArgiopeConstantTestElement.CLASS_FORM_RESET_IP_BLOCKING + "')[0].submit();";
-	
-	private static final String ELEM_CLASS_IP_BLOCK_RESET = ArgiopeConstantTestElement.CLASS_STATUS_IP_BLOCKING_RESET;
-	private static final String IP_BLOCK_RESET_TRUE = "true";
-	private static final String IP_BLOCK_RESET_FALSE = "false";
 
 	public static void waitDocReady() {
 		driverWait.until(docReadyPred);
@@ -182,27 +172,22 @@ public class TestUtils {
 		}
 	}
 	
-	/**
-	 * *****Not Test Safe*****<br />
-	 */
 	public static void resetIpBlocking() {
+		RestTemplate rt = new RestTemplate();
 		
-		driver.get(ArgiopeConstantTesting.URL_RESET_IP_BLOCKING);
-        JavascriptExecutor jsExecutor;
+		for(String ip : ArgiopeConstantTesting.LOCALHOST_IP_LIST) {
+			IpBlockingResetRequest req = new IpBlockingResetRequest();
+			req.setUsername(AppConstants.Users.AutomationTesting.USERNAME);
+			req.setPassword(AppConstants.Users.AutomationTesting.PASSWORD);
+			req.setIp(ip);
+			
+			IpBlockingResetResponse resp = rt.postForObject(ArgiopeConstantTesting.URL_RESET_IP_BLOCKING_ENDPOINT, 
+					req, IpBlockingResetResponse.class);
 
-        // TODO: We should probably be able to remove this check since we paramterized the 
-        // class using "implements Predicate<JavascriptExecutor>"
-        if(driver instanceof JavascriptExecutor) {
-            jsExecutor = (JavascriptExecutor) driver;
-        } else {
-            throw new IllegalStateException("This driver does not implement the JavascriptExecutor interface!");
-        }
-
-        jsExecutor.executeScript(JAVASCRIPT_INSERT_IP_BLOCK_RESET_FORM_TEXT);
-        jsExecutor.executeScript(JAVASCRIPT_SUBMIT_IP_BLOCK_RESET_FORM);
-        Assert.assertTrue(TestUtils.elementClassTextEquals(ELEM_CLASS_IP_BLOCK_RESET, IP_BLOCK_RESET_TRUE), 
-        		"IP block reset element value not 'true' after reset. (Element class: " + ELEM_CLASS_IP_BLOCK_RESET
-        		+ ", Expected value: " + IP_BLOCK_RESET_TRUE + ", returned value: {Haven't coded this yet} )" );
+			Assert.assertNotEquals(resp.getResult(), IpBlockingResetResult.FAIL);
+			Assert.assertNotEquals(resp.getResult(), IpBlockingResetResult.INVALID_CREDENTIALS);
+		}
+		
 	}
 	
 	/**

@@ -14,6 +14,8 @@ public interface UserService {
 //	User getUser(Long id);
 	User getUser(String username);
 
+	User getUser(String username, boolean ignoreCase);
+
 	/** Returns all users without <b>any</b> filtering. */
 	Iterable<User> getAllUsers();
 	

@@ -82,11 +82,6 @@ public class ArgiopeConstantTestElement {
 	public static final String CLASS_BUTTON_LOGIN						= TestElement.LoginForm.Input.SUBMIT; //"link-login";
 	public static final String CLASS_BUTTON_DISPLAY_USERS_DELETE		= TestElement.DisplayUsersTable.Input.DELETE; //"button-display-users-delete";
 	public static final String CLASS_TABLE_DISPLAY_USERS				= TestElement.DisplayUsersTable.CLASS; //"table-display-users";
-	
-	/*The following section is sensitive and is displayed on client end and therefore must be disguised*/
-	public static final String CLASS_FORM_RESET_IP_BLOCKING				= TestElement.IpBlockingResetForm.CLASS; //"P5esbtvNjfBxwgRDp0Dx";
-	public static final String CLASS_INPUT_RESET_IP_BLOCKING			= TestElement.IpBlockingResetForm.Input.SUBMIT; //"HsvywMoxs1xvFKg3h4u4";
-	
 
 	// @formatter:on
 	public String getCLASS_PAGE_CREATE_USER() {
@@ -181,11 +176,5 @@ public class ArgiopeConstantTestElement {
 	}
 	public String getCLASS_TABLE_DISPLAY_USERS() {
 		return CLASS_TABLE_DISPLAY_USERS;
-	}
-	public String getCLASS_FORM_RESET_IP_BLOCKING() {
-		return CLASS_FORM_RESET_IP_BLOCKING;
-	}
-	public String getCLASS_INPUT_RESET_IP_BLOCKING() {
-		return CLASS_INPUT_RESET_IP_BLOCKING;
 	}
 }

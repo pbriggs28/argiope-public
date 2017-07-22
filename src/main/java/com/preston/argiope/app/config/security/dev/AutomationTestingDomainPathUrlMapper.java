@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import com.preston.argiope.app.config.security.AdditionalDomainPathUrlMapper;
 import com.preston.argiope.app.constant.AppConstants;
-import com.preston.argiope.app.constant.legacy.ArgiopeConstantUrl;
+import com.preston.argiope.app.constant.WebConstants;
 
 @Profile(AppConstants.Profiles.DEV)
 @Component
@@ -18,6 +18,6 @@ public class AutomationTestingDomainPathUrlMapper implements AdditionalDomainPat
 			.ExpressionInterceptUrlRegistry authRequests) throws Exception {
 		
 		// TODO: Change this to use an automation testing role
-		authRequests.mvcMatchers(ArgiopeConstantUrl.REQ_MAP_RESET_IP_BLOCKING).permitAll();
+		authRequests.mvcMatchers(WebConstants.DomainSecurityLayers.API).permitAll();
 	}
 }

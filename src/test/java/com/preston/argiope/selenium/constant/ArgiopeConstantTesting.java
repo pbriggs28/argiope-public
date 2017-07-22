@@ -1,8 +1,11 @@
 package com.preston.argiope.selenium.constant;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.preston.argiope.app.constant.WebConstants.RequestMappings.Annonymous;
+import com.preston.argiope.app.constant.WebConstants.RequestMappings.Api;
 import com.preston.argiope.app.constant.WebConstants.RequestMappings.Secured;
-import com.preston.argiope.app.constant.dev.DevWebConstants.RequestMappings.Dev;
 
 public class ArgiopeConstantTesting {
 	// @formatter:off
@@ -17,7 +20,7 @@ public class ArgiopeConstantTesting {
 	public static final String EMPTY_STRING = "";
 
 	// TODO: Extract out base URL
-	public static final String URL_ARGIOPE 						= "localhost:8080";
+	public static final String URL_ARGIOPE 						= "http://localhost:8080";
 	public static final String URL_INDEX 						= URL_ARGIOPE + Secured.Pages.HOME;
 	public static final String URL_LOGIN 						= URL_ARGIOPE + Annonymous.Pages.LOGIN;
 	public static final String URL_LOGOUT 						= URL_ARGIOPE + Secured.Pages.LOGOUT;
@@ -26,8 +29,14 @@ public class ArgiopeConstantTesting {
 	public static final String URL_DELETE_USER 					= URL_ARGIOPE + Secured.Admin.EditUsers.Pages.DELETE_USER;
 	public static final String URL_ADMIN 						= URL_ARGIOPE + Secured.Admin.Pages.HOME;
 	public static final String URL_403	 						= URL_ARGIOPE + Secured.Pages.UNATHORIZED;
-	public static final String URL_SYNCHRONIZE_TESTING_STATE	= URL_ARGIOPE + Dev.AutomationTesting.Pages.SYNCHRONIZE_TESTING_STATE;
-	public static final String URL_RESET_IP_BLOCKING	 		= URL_ARGIOPE + Dev.AutomationTesting.Pages.RESET_IP_BLOCKING;
+	public static final String URL_RESET_IP_BLOCKING_ENDPOINT	= URL_ARGIOPE + Api.EndPoints.RESET_IP_BLOCKING;
 	//@formatter:on
+	
+	public static final List<String> LOCALHOST_IP_LIST;
+	static {
+		LOCALHOST_IP_LIST = new ArrayList<>();
+		LOCALHOST_IP_LIST.add("127.0.0.1");
+		LOCALHOST_IP_LIST.add("0:0:0:0:0:0:0:1");
+	}
 	
 }

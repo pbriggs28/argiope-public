@@ -1,9 +1,6 @@
 package com.preston.argiope.app.config.bean;
 
-import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;
-import org.apache.tomcat.util.descriptor.web.SecurityCollection;
-import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
@@ -46,18 +43,8 @@ public class WebAppBeanDefinitionContainer {
 	@Profile(AppConstants.Profiles.DEV_EMBEDDED_SERVER)
 	@Bean
 	public EmbeddedServletContainerFactory servletContainerBean() {
-		TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {
-			@Override
-			protected void postProcessContext(Context context) {
-				SecurityConstraint securityConstraint = new SecurityConstraint();
-				securityConstraint.setUserConstraint("CONFIDENTIAL");
-				SecurityCollection collection = new SecurityCollection();
-				collection.addPattern("/*");
-				securityConstraint.addCollection(collection);
-				context.addConstraint(securityConstraint);
-			}
-		};
-
+		TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory(servletProps.getHttpPort());
+		/* Extracted 'require HTTPS' and port redirection to be managed by Spring security */
 		tomcat.addAdditionalTomcatConnectors(initiateHttpConnector());
 		return tomcat;
 	}
@@ -67,7 +54,7 @@ public class WebAppBeanDefinitionContainer {
 		connector.setScheme("http");
 		connector.setPort(servletProps.getHttpPort());
 		connector.setSecure(false);
-		connector.setRedirectPort(servletProps.getHttpsPort());
+		/* Extracted 'require HTTPS' and port redirection to be managed by Spring security */
 
 		return connector;
 	}

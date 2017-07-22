@@ -8,7 +8,7 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="webapp-argiope"/>
-<stringAttribute key="org.hibernate.eclipse.launch.CFG_XML_FILE" value="\webapp-argiope\conf\sql-scripts\sql-server\hibernate-reverse-engineer\conf\hibernate.cfg.xml"/>
+<stringAttribute key="org.hibernate.eclipse.launch.CFG_XML_FILE" value="\webapp-argiope\dev\hibernate-reverse-engineer\sql-server\conf\hibernate.cfg.xml"/>
 <stringAttribute key="org.hibernate.eclipse.launch.CONFIGURATION_FACTORY" value="CORE"/>
 <stringAttribute key="org.hibernate.eclipse.launch.CONNECTION_PROFILE_NAME" value="New SQL Server"/>
 <listAttribute key="org.hibernate.eclipse.launch.FILE_MAPPINGS"/>

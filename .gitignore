@@ -4,3 +4,4 @@ src/test/output/*
 /.springBeans
 !test-output/testng-results.xml
 /.factorypath
+/.tern-project

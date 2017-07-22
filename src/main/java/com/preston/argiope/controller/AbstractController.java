@@ -1,16 +1,22 @@
 package com.preston.argiope.controller;
 
+import java.util.Arrays;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.preston.argiope.app.constant.AppConstants;
 import com.preston.argiope.app.constant.WebConstants.RequestMappings.Secured;
+import com.preston.argiope.app.constant.dev.DevWebConstants;
 import com.preston.argiope.app.constant.legacy.ArgiopeConstantSecurity;
 import com.preston.argiope.app.constant.legacy.ArgiopeConstantTestElement;
 import com.preston.argiope.app.constant.legacy.ArgiopeConstantUrl;
@@ -19,6 +25,8 @@ import com.preston.argiope.model.user.User;
 @Controller
 public abstract class AbstractController {
 	private Logger logger = LoggerFactory.getLogger(getClass());
+	
+	@Autowired private ConfigurableEnvironment env;
 // @formatter:off
 	
 	public static class Views {
@@ -28,7 +36,6 @@ public abstract class AbstractController {
 		public static final String VIEW_DISPLAY_USERS		= "user/displayusers";
 		public static final String VIEW_ADMIN 				= "admin/admin";
 		public static final String VIEW_403 				= "403";
-		public static final String VIEW_RESET_IP_BLOCKING	= "automationtesting/resetipblocking";
 	}
 	
 	public static class Redirects {
@@ -113,6 +120,32 @@ public abstract class AbstractController {
 	@ModelAttribute
 	protected ArgiopeConstantSecurity argiopeConstantSecurity() {
 		return new ArgiopeConstantSecurity();
+	}
+	
+	@ModelAttribute(name="devUser")
+	protected User devUser() {
+		// TODO: There has to be a better way to check if dev profile is active (I'm on a plane and can't google this)
+		boolean devProfActive = Arrays.asList(env.getActiveProfiles()).contains(AppConstants.Profiles.DEV);
+				
+		if(!devProfActive)
+			return null;
+		
+		User devUser = new User();
+		devUser.setUsername(AppConstants.Users.Dev.USERNAME);
+		devUser.setPassword(AppConstants.Users.Dev.PASSWORD);
+		
+		return devUser;
+	}
+	
+	@ModelAttribute(name="h2ConsoleUrl")
+	protected String h2ConsoleUrl() {
+		// TODO: There has to be a better way to check if h2-console profile is active (I'm on a plane and can't google this)
+		boolean h2ConsoleProfActive = Arrays.asList(env.getActiveProfiles()).contains(AppConstants.Profiles.DEV_EMBEDDED_DB_CONSOLE);
+				
+		if(!h2ConsoleProfActive)
+			return null;
+		
+		return DevWebConstants.RequestMappings.H2Console.DOMAIN_PATH;
 	}
 	
 	/*Do not define @RequestMappings here, this is an Abstract class and will thus result in duplicate mappings*/

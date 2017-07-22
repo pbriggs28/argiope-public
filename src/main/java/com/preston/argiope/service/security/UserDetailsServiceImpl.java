@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.preston.argiope.app.props.SecurityProps;
 import com.preston.argiope.model.user.User;
 import com.preston.argiope.service.user.UserService;
 
@@ -23,10 +24,17 @@ import com.preston.argiope.service.user.UserService;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 	@Autowired private UserService userService;
+	@Autowired private SecurityProps secProps;
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userService.getUser(username);
+		User user = null;
+		if(secProps.getIgnoreUsernameCase()) {
+			user = userService.getUser(username, true);
+		} else {
+			userService.getUser(username);			
+		}
+		
 		if(user == null)
 			throw new UsernameNotFoundException("Username not found!");
 		

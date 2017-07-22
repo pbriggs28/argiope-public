@@ -51,6 +51,8 @@ public class UserController extends AbstractController{
 		// TODO Handle this with Spring
 		/* Set error/success messages */
 		if(loginError == "") {
+			// TODO: This message is getting overridden on IP blocked event which makes this
+			// log message invalid.
 			String msg = AbstractController.Model.Values.VAL_LOGIN_ERROR_MSG;
 			logger.debug("Adding login error message to model: {}", msg);
 			

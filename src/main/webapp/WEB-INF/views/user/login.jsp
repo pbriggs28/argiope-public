@@ -20,6 +20,15 @@
 						<form:label path="password">Password:</form:label>
 						<form:password path="password" cssClass="${argiopeConstantTestElement.CLASS_INPUT_LOGIN_FORM_PASSWORD}" />
 					</div>
+					<c:if test="${devUser != null}">
+						<br/>
+						<p>Default Dev Username: <b>${devUser.username}</b></p>
+						<p>Default Dev Password: <b>${devUser.password}</b></p>
+					</c:if>
+					<c:if test="${h2ConsoleUrl != null}">
+						<br/>
+						<a href="${h2ConsoleUrl}">H2 Console</a> (Use blank username & pw)
+					</c:if>
 				</div>
 				<div id="form-user-bottom">
 					<div>

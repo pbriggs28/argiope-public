@@ -35,10 +35,10 @@
 <booleanAttribute key="org.hibernate.tools.exporters.org.hibernate.tools.query" value="false"/>
 <stringAttribute key="org.hibernate.tools.exporters.org.hibernate.tools.query.extension_id" value="org.hibernate.tools.query"/>
 <booleanAttribute key="org.hibernate.tools.jdk5" value="false"/>
-<stringAttribute key="org.hibernate.tools.outputdir" value="\webapp-argiope\conf\sql-scripts\sql-server\hibernate-reverse-engineer\target"/>
+<stringAttribute key="org.hibernate.tools.outputdir" value="\webapp-argiope\dev\hibernate-reverse-engineer\sql-server\target"/>
 <stringAttribute key="org.hibernate.tools.package" value=""/>
 <booleanAttribute key="org.hibernate.tools.prefercompositeids" value="true"/>
-<stringAttribute key="org.hibernate.tools.revEngFile" value="\webapp-argiope\conf\sql-scripts\sql-server\hibernate-reverse-engineer\conf\hibernate.reveng.xml"/>
+<stringAttribute key="org.hibernate.tools.revEngFile" value="\webapp-argiope\dev\hibernate-reverse-engineer\sql-server\conf\hibernate.reveng.xml"/>
 <booleanAttribute key="org.hibernate.tools.reveng.detect_many_to_many" value="true"/>
 <booleanAttribute key="org.hibernate.tools.reveng.detect_one_to_one" value="true"/>
 <booleanAttribute key="org.hibernate.tools.reveng.detect_optimistc_lock" value="true"/>

@@ -63,11 +63,12 @@ public class SecurityWebAppConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired private CustomAuthenticationFailureHandler customAuthenticationFailureHandler;
 	@Autowired private CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
-	@Autowired private List<AdditionalDomainPathUrlMapper> urlMapperList;
-	@Autowired private List<WebSecurityAdditionalConfigurer> additionalConfigurerList;
+	@Autowired(required=false) private List<AdditionalDomainPathUrlMapper> urlMapperList;
+	@Autowired(required=false) private List<WebSecurityAdditionalConfigurer> additionalConfigurerList;
 
 	private static final String ADMIN_DOMAIN_PATH = WebConstants.DomainSecurityLayers.ADMIN + "**";
 	private static final String SECURE_DOMAIN_PATH = WebConstants.DomainSecurityLayers.SECURE + "**";
+	private static final String API_DOMAIN_PATH = WebConstants.DomainSecurityLayers.API + "**";
 	private static final String STATIC_RESOURCE_DOMAIN_PATH = WebConstants.DomainSecurityLayers.STATIC_RESOURCES + "**";
 	private static final String PUBLIC_DOMAIN_PATH = WebConstants.DomainSecurityLayers.PUBLIC + "**";
 	
@@ -147,7 +148,7 @@ public class SecurityWebAppConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	protected void addAdditionalDomainPathUrlMappings(HttpSecurity http) throws Exception {
-		if(urlMapperList.isEmpty()) {
+		if(urlMapperList == null || urlMapperList.isEmpty()) {
 			logger.debug("No additional domain path URL mappers found of type [{}]. Skipping...", AdditionalDomainPathUrlMapper.class.getSimpleName());
 			return;
 		}
@@ -176,6 +177,8 @@ public class SecurityWebAppConfig extends WebSecurityConfigurerAdapter {
 	 */
 	protected void addLowPriorityUrlMappings(HttpSecurity http) throws Exception {
 		logger.debug("Adding low priority URL mappings...");
+		// TODO: Add security to web services
+		http.authorizeRequests().antMatchers(API_DOMAIN_PATH).permitAll();
 		http.authorizeRequests().antMatchers(STATIC_RESOURCE_DOMAIN_PATH).permitAll();
 		http.authorizeRequests().antMatchers(PUBLIC_DOMAIN_PATH).anonymous();
 	}
@@ -186,7 +189,7 @@ public class SecurityWebAppConfig extends WebSecurityConfigurerAdapter {
 	 * @throws Exception
 	 */
 	protected void addFinalUrlMappings(HttpSecurity http) throws Exception {
-		logger.debug("Adding last URL mappings...");
+		logger.debug("Adding final URL mappings...");
 		http.authorizeRequests().anyRequest().authenticated();
 		http.authorizeRequests().anyRequest().hasRole("USER");
 	}
@@ -217,8 +220,8 @@ public class SecurityWebAppConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	protected void processAdditionalConfigurers(HttpSecurity http) throws Exception {
-		if(additionalConfigurerList.isEmpty()) {
-			logger.debug("No additional security configurers found of type [{}]. Skipping...", WebSecurityAdditionalConfigurer.class.getSimpleName());
+		if(additionalConfigurerList == null || additionalConfigurerList.isEmpty()) {
+			logger.debug("No additional security configurers found of type [{}]. Skipping additional security configuration...", WebSecurityAdditionalConfigurer.class.getSimpleName());
 			return;
 		}
 		logger.debug("Processing additional security configurers...");

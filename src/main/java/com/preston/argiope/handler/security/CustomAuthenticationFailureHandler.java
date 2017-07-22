@@ -26,16 +26,14 @@ import com.preston.argiope.service.security.LoginAttemptService;
  *
  */
 @Component
+// TODO: Create a subclass of this class to handle any IP blocking features and make it conditional
+// on the dev profile.
 public class CustomAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler{
 	private static final String LOGIN_FAILED_URL = WebConstants.RequestMappings.Annonymous.Pages.LOGIN_FAILURE;
+	private static final String IP_BLOCKED_ATTR = DevWebConstants.ResponseAttributes.IpBlocked.ATTRIBUTE;
+	private static final String FAILED_LOGIN_COUNT_ATTR = DevWebConstants.ResponseAttributes.FailedLoginCount.ATTRIBUTE;
 	
 	@Autowired private LoginAttemptService loginAttemptService;
-	
-
-	// TODO: Create a subclass of this to handle any IP blocking features and make it conditional
-	// on the dev profile.
-	private final String ipBlockedAttr = DevWebConstants.ResponseAttributes.IpBlocked.ATTRIBUTE;
-	private final String failedLoginCountAttr = DevWebConstants.ResponseAttributes.FailedLoginCount.ATTRIBUTE;
 	
 	public CustomAuthenticationFailureHandler() {
 		setDefaultFailureUrl(LOGIN_FAILED_URL);
@@ -44,18 +42,18 @@ public class CustomAuthenticationFailureHandler extends SimpleUrlAuthenticationF
 	@Override
 	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException exception) throws IOException, ServletException {
-
-		setSessionAttr(request.getSession(), response, exception);
+		
+		setSessionAttr(request, response, exception);
 		super.onAuthenticationFailure(request, response, exception);
 	}
 
 	/* Must set attributes on session. Login failure is a redirect, not a
 	 *  forward and will thus lose all request attributes */
-	private void setSessionAttr(HttpSession session, HttpServletResponse response,
+	private void setSessionAttr(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException exception) throws IOException, ServletException {
 		
-		setFailedAttemptsAttr(session, response, exception);
-		setIpBlockedAttr(session, response, exception);
+		setFailedAttemptsAttr(request, response, exception);
+		setIpBlockedAttr(request, response, exception);
 	}
 	
 	/**
@@ -68,11 +66,11 @@ public class CustomAuthenticationFailureHandler extends SimpleUrlAuthenticationF
 	 * @throws IOException
 	 * @throws ServletException
 	 */
-	private void setFailedAttemptsAttr(HttpSession session, HttpServletResponse response,
+	private void setFailedAttemptsAttr(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException exception) throws IOException, ServletException {
 		
-		int numFailedAttempts = loginAttemptService.getNumFailedAttempts();
-		session.setAttribute(failedLoginCountAttr, numFailedAttempts);
+		int numFailedAttempts = loginAttemptService.numFailedAttempts(request);
+		request.getSession().setAttribute(FAILED_LOGIN_COUNT_ATTR, numFailedAttempts);
 	}
 	
 	/**
@@ -89,13 +87,13 @@ public class CustomAuthenticationFailureHandler extends SimpleUrlAuthenticationF
 	 * @throws IOException
 	 * @throws ServletException
 	 */
-	private void setIpBlockedAttr(HttpSession session, HttpServletResponse response,
+	private void setIpBlockedAttr(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException exception) throws IOException, ServletException {
 		
 		boolean ipBlocked = false;
 		if(exception instanceof IpBlockedException) {
 			ipBlocked = true;
 		}
-		session.setAttribute(ipBlockedAttr, ipBlocked);
+		request.getSession().setAttribute(IP_BLOCKED_ATTR, ipBlocked);
 	}
 }

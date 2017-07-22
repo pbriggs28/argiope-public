@@ -132,13 +132,12 @@ public class WebConstants {
 		public class Static {
 			public static final String DOMAIN_PATH 	= "/Static/";
 		}
+		
 		public class Annonymous {
 			public static final String DOMAIN_PATH 	= APP_ROOT_PATH + "Public/";
 			public class Pages {
 				public static final String LOGIN 				= DOMAIN_PATH + "Login";	
 				public static final String LOGIN_FAILURE		= LOGIN + "?" + QueryStringKeys.QRY_STR_LOGIN_ERROR;				
-			}
-			public class Static {
 			}
 		}
 		
@@ -166,6 +165,18 @@ public class WebConstants {
 				}
 			}
 		}
+
+		public static class Api {
+			public static final String DOMAIN_PATH = APP_ROOT_PATH + "api/";
+			public static class Dev {
+				// TODO: Move IP Blocking to Dev and only configure in dev mode
+			}
+			public class EndPoints {
+				public static final String RESET_IP_BLOCKING = DOMAIN_PATH + "reset-ip-blocking";
+				
+			}
+			
+		}
 	}
 	
 	/** 
@@ -175,6 +186,7 @@ public class WebConstants {
 	 *
 	 */
 	public static class DomainSecurityLayers {
+		public static final String API = RequestMappings.Api.DOMAIN_PATH;
 		public static final String PUBLIC = RequestMappings.Annonymous.DOMAIN_PATH;
 		public static final String STATIC_RESOURCES = Static.DOMAIN_PATH;
 		public static final String SECURE = RequestMappings.Secured.DOMAIN_PATH;

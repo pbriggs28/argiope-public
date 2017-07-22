@@ -19,7 +19,8 @@ public class IpBlocking extends AbstractTest{
 	
 	@BeforeClass
 	public void beforeClass() {
-		LoginAttemptService.startAutomationTestingMode();
+		// TODO: Set this up
+//		LoginAttemptService.startAutomationTestingMode();
 	}
 	
 	/**Put the testing user in an unauthorized state before each test.*/
@@ -32,7 +33,7 @@ public class IpBlocking extends AbstractTest{
 	@AfterClass
 	public void afterClass() {
 		TestUtils.resetIpBlocking();
-		LoginAttemptService.stopAutomationTestingMode();
+//		LoginAttemptService.stopAutomationTestingMode();
 	}
 
 	/**

@@ -101,16 +101,29 @@ public class AppConstants {
 	public class PropertyKeys {
 		public static final String PREFIX = "com.preston.argiope";
 
+		public class App {
+			public static final String PREFIX = PropertyKeys.PREFIX + ".app";
+		}
+
 		public class Servlet {
 			public static final String PREFIX = PropertyKeys.PREFIX + ".servlet";
 		}
 		public class Security {
 			public static final String PREFIX = PropertyKeys.PREFIX + ".sec";
-			
+			public static final String REQUIRE_HTTPS = PREFIX + ".require-https";
+			public static final String DISABLE_CSRF = PREFIX + ".disable-csrf";
+			public static final String IGNORE_USERNAME_CASE = PREFIX + ".ignore-username-case";
 		}
+			
 		public class DataSource {
 			public static final String PREFIX =  PropertyKeys.PREFIX + ".datasource";
 		}
+
+		public class Dev {
+			public static final String PREFIX =  PropertyKeys.PREFIX + ".dev";
+		}
+		
+		// TODO: Move these to a "Logging" subclass
 		public static final String LOG_PROPERTY_SOURCES = PREFIX + ".log.prop.sources";
 		public static final String LOG_SPRING_RESOLVED_PROPERTIES = PREFIX + ".log.spring.resolved.props";
 	}
@@ -154,19 +167,25 @@ public class AppConstants {
 
 	// DAO Contants
 	// ====================================================================================================
-	public class DataStore {
-		// TODO: Remove 'Tables' class and add 'Table' suffix. Ex: UserTable, RoleTable, etc.
-		// This way when we organize imports for model classes it won't conflict with this constant.
-		public class Tables {
+	public static class DataStore {
+		public class Schemas {
+
 			/**
 			 * IMPORTANT: If one table defines a schema (static.role) and others do not,
 			 * the order in which the tables/keys are dropped by hibernate gets messed up.
 			 * So since we are defining a schema for role (static schema) we MUST define
 			 * a schema for every model class.
 			 */
-			private static final String DEFAULT_SCHEMA = "dbo";
+			private static final String DEFAULT = "dbo";
+			private static final String AUDIT = "audit";
+			private static final String STATIC = "static";
+			
+		}
+		// TODO: Remove 'Tables' class and add 'Table' suffix. Ex: UserTable, RoleTable, etc.
+		// This way when we organize imports for model classes it won't conflict with this constant.
+		public class Tables {
 			public class User {
-				public static final String TABLE_SCHEMA = DEFAULT_SCHEMA;
+				public static final String TABLE_SCHEMA = Schemas.DEFAULT;
 				public static final String TABLE_NAME = "account";
 				public static final String TABLE_SEQUENCE = "dbo.seq_test1";
 				public static final String SEQUENCE_GENERATOR_NAME = "account-sequence-generator";
@@ -185,7 +204,7 @@ public class AppConstants {
 			}
 
 			public class Role {
-				public static final String TABLE_SCHEMA = "static";
+				public static final String TABLE_SCHEMA = Schemas.STATIC;
 				public static final String TABLE_NAME = "role";
 				public class Columns {
 					public static final String ROLE_ID = "role_id";
@@ -195,17 +214,30 @@ public class AppConstants {
 			}
 
 			public class UserRoleMap {
-				public static final String TABLE_SCHEMA = DEFAULT_SCHEMA;
+				public static final String TABLE_SCHEMA = Schemas.DEFAULT;
 				public static final String TABLE_NAME = "account_role_map";
 				public class Columns {
 					public static final String USER_ID = "account_id";
 					public static final String ROLE_ID = "role_id";
-					
+				}
+			}
+			
+			public class MethodPerformanceTestingResultTable {
+				public static final String TABLE_SCHEMA = Schemas.AUDIT;
+				public static final String TABLE_NAME = "performance_monitoring_result";
+				public class Columns {
+					public static final String PERFORMANCE_MONITORING_RESULT_ID = "performance_monitoring_result_id";
+					public static final String RECORDED_BY = "recorded_by";
+					public static final String PACKAGE_NAME = "package_name";
+					public static final String CLASS_NAME = "class_name";
+					public static final String METHOD_NAME = "method_name";
+					public static final String RUNTIME_MILLIS = "runtime_millis";
+					public static final String RUNTIME_DATE = "runtime_date";
 				}
 			}
 		}
 		
-		public class DefaultSequenceSizes {
+		public  class DefaultSequenceSizes {
 			/** Used for infrequent inserts such as creating a new user. */
 			public static final String SMALL = "5";
 			
@@ -218,7 +250,10 @@ public class AppConstants {
 //			public static final int XL = 1000;
 		}
 		
-		public class StaticData {
+		public static class StaticData {
+			public static final Set<RoleConstant> defaultRoleList = new HashSet<>();
+			static { defaultRoleList.add(RoleConstant.USER); }
+			
 			public class Role {
 				public class User {
 					public static final String KEY = "ROLE_USER";

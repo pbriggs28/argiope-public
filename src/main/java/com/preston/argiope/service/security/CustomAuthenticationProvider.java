@@ -1,5 +1,9 @@
 package com.preston.argiope.service.security;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.core.Authentication;
@@ -24,6 +28,8 @@ import com.preston.argiope.exception.service.security.IpBlockedException;
  */
 @Component
 public class CustomAuthenticationProvider extends DaoAuthenticationProvider {
+	private Logger logger = LoggerFactory.getLogger(getClass());
+	@Autowired private HttpServletRequest req;
 	@Autowired private LoginAttemptService loginAttemptService;
 	
 	public CustomAuthenticationProvider(UserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
@@ -101,7 +107,9 @@ public class CustomAuthenticationProvider extends DaoAuthenticationProvider {
 		
 		return auth;
 	}
-	
+
+	// Private Methods
+	// ====================================================================================================
 	/**
 	 * Perform checks <b>prior</b> to retrieving user from datastore.
 	 */
@@ -110,9 +118,10 @@ public class CustomAuthenticationProvider extends DaoAuthenticationProvider {
 	}
 	
 	private void checkIpBlocked() {
-		if (loginAttemptService.isBlocked()) {
+		if (loginAttemptService.ipBlocked(req)) {
 			String message = String.format("The IP address [%s] has exceeded the maximum failed login attempts. Failed: [%s]. Max: [%s].", 
-					loginAttemptService.getIp(), loginAttemptService.getNumFailedAttempts(), loginAttemptService.getMaxAttempts());
+					loginAttemptService.getIp(req), loginAttemptService.numFailedAttempts(req), loginAttemptService.getMaxAttempts());
+			logger.debug(message);
 			throw new IpBlockedException(message);
 		}
 	}

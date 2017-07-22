@@ -64,7 +64,10 @@ public class DevWebConstants {
 					public static final String RESET_IP_BLOCKING		= DOMAIN_PATH + "0jia4vKbbD948dsNtoCr";						
 				}
 			}
-			
+		}
+		
+		public class H2Console {
+			public static final String DOMAIN_PATH = "/h2-console/";
 		}
 	}
 

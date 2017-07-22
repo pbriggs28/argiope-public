@@ -40,11 +40,7 @@ public class ArgiopeConstantUrl {
 	public static final String REQ_MAP_DELETE_USER 					= Secured.Admin.EditUsers.Pages.DELETE_USER;
 	public static final String REQ_MAP_ADMIN 						= Secured.Admin.Pages.HOME;
 	public static final String REQ_MAP_403	 						= Secured.Pages.UNATHORIZED;
-	public static final String DOMAIN_PATH_STATIC 					= Static.DOMAIN_PATH;
-	/*Automation Testing (Must disguise on client side)*/
-	public static final String REQ_MAP_SYNCHRONIZE_TESTING_STATE 	= Dev.AutomationTesting.Pages.SYNCHRONIZE_TESTING_STATE; // "/oitLNCgHVS7Vr84ZsI4E";
-	public static final String REQ_MAP_RESET_IP_BLOCKING		 	= Dev.AutomationTesting.Pages.RESET_IP_BLOCKING; // "/0jia4vKbbD948dsNtoCr";
-	
+	public static final String DOMAIN_PATH_STATIC 					= Static.DOMAIN_PATH;	
 
 	public static final String QRY_STR_LOGIN_ERROR 		= WebConstants.QueryStringKeys.QRY_STR_LOGIN_ERROR;
 	public static final String QRY_STR_LOGOUT_SUCCESS 	= WebConstants.QueryStringKeys.QRY_STR_LOGOUT_SUCCESS;
@@ -75,12 +71,6 @@ public class ArgiopeConstantUrl {
 	}
 	public String getDOMAIN_PATH_STATIC() {
 		return DOMAIN_PATH_STATIC;
-	}
-	public String getREQ_MAP_SYNCHRONIZE_TESTING_STATE() {
-		return REQ_MAP_SYNCHRONIZE_TESTING_STATE;
-	}
-	public String getREQ_MAP_RESET_IP_BLOCKING() {
-		return REQ_MAP_RESET_IP_BLOCKING;
 	}
 	public String getQRY_STR_LOGIN_ERROR() {
 		return QRY_STR_LOGIN_ERROR;

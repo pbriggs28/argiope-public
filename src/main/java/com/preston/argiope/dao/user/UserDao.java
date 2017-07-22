@@ -10,6 +10,8 @@ public interface UserDao extends BaseDao<User, Long> {
 	
 	User findByUsername(String username);
 	
+	User findByUsernameIgnoreCase(String username);
+	
 	Iterable<User> findByEnabled(boolean enabled);
 	
 }
